@@ -1,0 +1,13 @@
+<h2> Create New Game <h2>
+<% if !(@game.player_number) %>
+  <%= form_with scope: :game, local: true do |form|%>
+    <div>
+      <%= form.label :player_number %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+<% else %>
+  <% $i = 0%>
+  <% while $i < @game.player_number %>
+    
